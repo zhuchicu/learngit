@@ -1,1 +1,2 @@
 
+before branch featrue2 first commit. Generate Conflict.
