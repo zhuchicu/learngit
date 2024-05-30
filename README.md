@@ -19,3 +19,13 @@ $ git clone <新的 git 地址>  # 代码迁移就成功了，接下来就可以
 ~~~
 
 Q3 如果本地仓库已经存在提交，在push到远程仓库之前需要先pull更新到远端最新版本，但远端又有新的提交，为了避免merge操作，可以使用git rebase命令使提交更顺滑。
+
+~~~bash
+# Step 1：在合并远程分支之前，将本地提交 rebase 到远程分支的基础之上
+git pull --rebase origin master
+# Step 2：出现冲突，解决完冲突后
+git add .
+git rebase --continue
+# Step 3：push 本地仓库到远程
+git push origin master
+~~~
