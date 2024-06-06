@@ -30,3 +30,13 @@ git rebase --continue
 # Step 3：push 本地仓库到远程
 git push origin master
 ~~~
+
+Q4 合并提交：整理本地多个提交历史，保持提交整洁
+
+使用 git rebase 合并多个连续提交
+
+例如，下列命令将会打开一个交互式界面，列出最近 3 个提交记录：
+
+~~~bash
+git rebase -i HEAD~3
+~~~
